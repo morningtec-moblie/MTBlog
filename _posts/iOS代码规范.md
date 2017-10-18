@@ -6,7 +6,7 @@ categories: iOS
 ---
 
 
-#参考：
+# 参考：
 [Objective-C编码规范[译]](http://www.jianshu.com/p/8b76814b3663)
 
 [IOS 编码规范整理](http://www.jianshu.com/p/f13119c179a4)
@@ -14,15 +14,8 @@ categories: iOS
 [iOS团队代码规范（OC版）](http://hawkingouyang.com/2016/09/10/7_ObjC-code-style-as-team/)
 
 
-#目录
-| [语言](#language) | [代码组织](#codeOrganization) | [空格](#space) | [注释](#annotations) | [命名](#name) | [下划线](#Underline) | [方法](#method) | [变量](#variable) | [属性特性](#attributeAttribute) | [点符号语法](#pointSymbolSyntax) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **[字面值](#literalValue)** | **[常量](#constant)** | **[枚举类型](#enumType)** | **[Case语句](#caseStatement)** | **[私有属性](#privateAttribute)** | **[布尔值](#booleanValue)** | **[条件语句](#conditionalStatement)** | **[三元操作符](#ternaryOperator)** | **[Init方法](#initMethod)** | **[类构造方法](#classConstructor)** |
-| **[CGRect函数](#CGRectFunction)** | **[黄金路径](#goldPath)** | **[错误处理](#errorHandling)** | **[单例模式](#singletonMode)** | **[换行符](#lineBreaks)** | **[Xcode工程](#XcodeProject)** | **[语法糖](#grammarSugar)** | **[项目工程目录](#projectCatalog)** |
 
-<br><br>
-
-# <div id = "language">语言</div>
+# 语言
 
 应该使用US英语.
 
@@ -36,7 +29,9 @@ UIColor *myColor = [UIColor whiteColor];
 UIColor *myColour = [UIColor whiteColor];
 ```
 
-# <div id = "codeOrganization">代码组织</div>
+<!-- more -->
+
+# 代码组织
 
 在函数分组和protocol/delegate实现中使用#pragma mark -来分类方法，要遵循以下一般结构：
 
@@ -80,7 +75,7 @@ UIColor *myColour = [UIColor whiteColor];
 - (NSString *)description {}
 ```
 
-# <div id = "space">空格</div>
+# 空格
 
 缩进使用4个空格，确保在Xcode偏好设置来设置。(raywenderlich.com使用2个空格)
 方法大括号和其他大括号(if/else/switch/while 等.)总是在同一行语句打开但在新行中关闭。
@@ -144,7 +139,7 @@ NSArray* array = @[ [foo description], @"Another String", [bar description] ];
 NSDictionary* dict = @{ NSForegroundColorAttributeName : [NSColor redColor] };
 ```
 
-# <div id = "annotations">注释</div>
+# 注释
 
 - 语句注释 <br>
 当需要注释时，注释应该用来解释这段特殊代码为什么要这样做。任何被使用的注释都必须保持最新或被删除。<br>
@@ -157,7 +152,7 @@ NSDictionary* dict = @{ NSForegroundColorAttributeName : [NSColor redColor] };
 尽可能详细地对关键变量进行注释，说明其作用
 
 
-# <div id = "name">命名</div>
+# 命名
 
 - Apple命名规则尽可能坚持，特别是与这些相关的memory management rules (NARC)。<br><br>长的，描述性的方法和变量命名是好的。
 
@@ -202,7 +197,7 @@ id varnm;
 
 ```
 
-###总体命名规范（遵循苹果官方规范）
+### 总体命名规范（遵循苹果官方规范）
 
 `小驼峰命名法(CamelCase):第一个单词小写字母开头，其他单词首字母大写；`
 
@@ -253,7 +248,7 @@ id varnm;
 
 更多命名规则见 [IOS 编码规范整理](http://www.jianshu.com/p/f13119c179a4)
 
-# <div id = "Underline">下划线</div>
+# 下划线
 
 当使用属性时，实例变量应该使用self.来访问和改变。这就意味着所有属性将会视觉效果不同，因为它们前面都有self.。
 
@@ -262,7 +257,7 @@ id varnm;
 局部变量不应该包含下划线。
 
 
-# <div id = "method">方法</div>
+# 方法
 
 在方法签名中，应该在方法类型(-/+ 符号)之后有一个空格。在方法各个段之间应该也有一个空格(符合Apple的风格)。在参数之前应该包含一个具有描述性的关键字来描述参数。
 
@@ -287,7 +282,7 @@ id varnm;
 - (instancetype)initWith:(int)width and:(int)height;  // Never do this.
 ```
 
-# <div id = "variable">变量</div>
+# 变量
 
 变量尽量以描述性的方式来命名。单个字符的变量命名应该尽量避免，除了在for()循环。
 
@@ -315,7 +310,7 @@ id varnm;
 }
 ```
 
-# <div id = "attributeAttribute">属性特性</div>
+# 属性特性
 
 所有属性特性应该显式地列出来，有助于新手阅读代码。属性特性的顺序应该是storage、atomicity，与在Interface Builder连接UI元素时自动生成代码一致。
 
@@ -349,7 +344,7 @@ NSString应该使用copy 而不是 strong的属性特性。
 @property (strong, nonatomic) NSString *tutorialName;
 ```
 
-# <div id = "pointSymbolSyntax">点符号语法</div>
+# 点符号语法
 
 点语法是一种很方便封装访问方法调用的方式。当你使用点语法时，通过使用getter或setter方法，属性仍然被访问或修改。想了解更多，阅读这里
 
@@ -371,7 +366,7 @@ NSInteger arrayCount = [self.array count];
 [[UIApplication sharedApplication] delegate];
 ```
 
-# <div id = "literalValue">字面值</div>
+# 字面值
 
 NSString, NSDictionary, NSArray, 和 NSNumber的字面值应该在创建这些类的不可变实例时被使用。请特别注意nil值不能传入NSArray和NSDictionary字面值，因为这样会导致crash。
 
@@ -393,7 +388,7 @@ NSNumber *shouldUseLiterals = [NSNumber numberWithBool:YES];
 NSNumber *buildingStreetNumber = [NSNumber numberWithInteger:10018];
 ```
 
-# <div id = "constant">常量</div>
+# 常量
 
 常量是容易重复被使用和无需通过查找和代替就能快速修改值。常量应该使用static来声明而不是使用#define，除非显式地使用宏。
 
@@ -412,7 +407,7 @@ static CGFloat const RWTImageThumbnailHeight = 50.0;
 #define thumbnailHeight 2
 ```
 
-# <div id = "enumType">枚举类型</div>
+# 枚举类型
 
 当使用enum时，推荐使用新的固定基本类型规格，因为它有更强的类型检查和代码补全。现在SDK有一个宏NS_ENUM()来帮助和鼓励你使用固定的基本类型。
 
@@ -447,7 +442,7 @@ enum GlobalConstants {
 };
 ```
 
-# <div id = "caseStatement">Case语句</div>
+# Case语句
 
 大括号在case语句中并不是必须的，除非编译器强制要求。当一个case语句包含多行代码时，大括号应该加上。
 
@@ -503,7 +498,7 @@ switch (menuType) {
 }
 ```
 
-# <div id = "privateAttribute">私有属性</div>
+# 私有属性
 
 私有属性应该在类的实现文件中的类扩展(匿名分类)中声明，命名分类(比如RWTPrivate或private)应该从不使用除非是扩展其他类。匿名分类应该通过使用<headerfile>+Private.h文件的命名规则暴露给测试。
 
@@ -519,7 +514,7 @@ switch (menuType) {
 @end
 ```
 
-# <div id = "booleanValue">布尔值</div>
+# 布尔值
 
 Objective-C使用YES和NO。因为true和false应该只在CoreFoundation，C或C++代码使用。既然nil解析成NO，所以没有必要在条件语句比较。不要拿某样东西直接与YES比较，因为YES被定义为1和一个BOOL能被设置为8位。
 
@@ -545,7 +540,7 @@ if (isAwesome == true) {} // Never do this.
 文字和例子从这里引用Cocoa Naming Guidelines
 ```
 
-# <div id = "conditionalStatement">条件语句</div>
+# 条件语句
 
 条件语句主体为了防止出错应该使用大括号包围，即使条件语句主体能够不用大括号编写(如，只用一行代码)。这些错误包括添加第二行代码和期望它成为if语句；还有，even more dangerous defect可能发生在if语句里面一行代码被注释了，然后下一行代码不知不觉地成为if语句的一部分。除此之外，这种风格与其他条件语句的风格保持一致，所以更加容易阅读。
 
@@ -570,7 +565,7 @@ if (!error)
 if (!error) return success;
 ```
 
-# <div id = "ternaryOperator">三元操作符</div>
+# 三元操作符
 
 当需要提高代码的清晰性和简洁性时，三元操作符?:才会使用。单个条件求值常常需要它。多个条件求值时，如果使用if语句或重构成实例变量时，代码会更加易读。一般来说，最好使用三元操作符是在根据条件来赋值的情况下。
 
@@ -592,7 +587,7 @@ result = isHorizontal ? x : y;
 result = a > b ? x = c > d ? c : d : y;
 ```
 
-# <div id = "initMethod">Init方法</div>
+# Init方法
 
 Init方法应该遵循Apple生成代码模板的命名规则。返回类型应该使用instancetype而不是id
 
@@ -609,7 +604,7 @@ Init方法应该遵循Apple生成代码模板的命名规则。返回类型应�
 查看关于instancetype的文章Class Constructor Methods
 
 
-# <div id = "classConstructor">类构造方法</div>
+# 类构造方法
 
 当类构造方法被使用时，它应该返回类型是instancetype而不是id。这样确保编译器正确地推断结果类型。
 
@@ -622,7 +617,7 @@ Init方法应该遵循Apple生成代码模板的命名规则。返回类型应�
 关于更多instancetype信息，请查看NSHipster.com
 
 
-# <div id = "CGRectFunction">CGRect函数</div>
+# CGRect函数
 
 当访问CGRect里的x, y, width, 或 height时，应该使用CGGeometry函数而不是直接通过结构体来访问。引用Apple的CGGeometry:
 
@@ -652,7 +647,7 @@ CGRect frame = (CGRect){ .origin = CGPointZero, .size = frame.size };
 ```
 
 #
-# <div id = "goldPath">黄金路径</div>
+# 黄金路径
 
 当使用条件语句编码时，左手边的代码应该是"golden" 或 "happy"路径。也就是不要嵌套if语句，多个返回语句也是OK。
 
@@ -678,7 +673,7 @@ CGRect frame = (CGRect){ .origin = CGPointZero, .size = frame.size };
 }
 ```
 
-# <div id = "errorHandling">错误处理</div>
+# 错误处理
 
 当方法通过引用来返回一个错误参数，判断返回值而不是错误变量。
 
@@ -704,7 +699,7 @@ if (error) {
 在成功的情况下，有些Apple的APIs记录垃圾值(garbage values)到错误参数(如果non-NULL)，那么判断错误值会导致false负值和crash。
 
 
-# <div id = "singletonMode">单例模式</div>
+# 单例模式
 
 单例对象应该使用线程安全模式来创建共享实例。
 
@@ -723,7 +718,7 @@ if (error) {
 
 这会防止possible and sometimes prolific crashes.
 
-# <div id = "lineBreaks">换行符</div>
+# 换行符
 
 换行符是一个很重要的主题，因为它的风格指南主要为了打印和网上的可读性。
 
@@ -737,13 +732,13 @@ self.productsRequest = [[SKProductsRequest alloc]
   initWithProductIdentifiers:productIdentifiers];
 ```
 
-# <div id = "XcodeProject">Xcode工程</div>
+# Xcode工程
 
 物理文件应该与Xcode工程文件保持同步来避免文件扩张。任何Xcode分组的创建应该在文件系统的文件体现。代码不仅是根据类型来分组，而且还可以根据功能来分组，这样代码更加清晰。
 
 尽可能在target的Build Settings打开"Treat Warnings as Errors，和启用以下additional warnings。如果你需要忽略特殊的警告，使用 Clang's pragma feature。
 
-# <div id = "grammarSugar">语法糖</div>
+# 语法糖
 
 代码中使用语法糖，提高写代码效率
 
@@ -777,9 +772,9 @@ self.productsRequest = [[SKProductsRequest alloc]
     NSNumber *c = @('a');
 ```
 
-# <div id = "projectCatalog">项目工程目录</div>
+# 项目工程目录
 
-###当前SDK项目目录（面向对象）
+### 当前SDK项目目录（面向对象）
 - ApplicationLayer（应用层）
   - Base（基类）
   - View （UI类）
@@ -798,7 +793,7 @@ self.productsRequest = [[SKProductsRequest alloc]
   	 - Other (其他)
   - Other(扩展)
 
-###其他案例：
+### 其他案例：
 
 - Modules：存放功能模块。将程序划分为多个功能模块，每个模块基于MVC/MVVM组织代码
 

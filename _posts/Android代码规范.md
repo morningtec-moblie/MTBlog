@@ -17,6 +17,8 @@ categories: 代码规范
 
 ③ 工具类以`Utils`结尾，例如：`HttpUtils`，`ImageLoadUtils`，`SPUtils`...
 
+<!-- more -->
+
 #### 2、Resources 文件命名：
 
 ① drawable文件命名：
