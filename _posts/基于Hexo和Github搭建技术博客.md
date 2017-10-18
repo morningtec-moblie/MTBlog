@@ -167,14 +167,29 @@ local_search:
 `livere_uid: #your livere_uid`
 
 ## 团队成员发布文章：
-① 先去`github`上把仓库下载下来，执行以下命令`git clone https://github.com/morningtec-moblie/MTBlog.git`
+① 先去`github`上把仓库下载下来，执行以下命令`https://github.com/morningtec-moblie/MTBlog.git`
 
-② 如果你还没有安装`hexo`，先执行`npm install hexo-cli -g`命令来安装`hexo`
+② 在`source/_posts/`文件夹下，新建一个`MarkDown`格式的文章。添加文章属性（例如）：
 
-③ 进入到`你的博客路径\.deploy_git`路径下执行`git init`命令 （如果没有找到`.deploy_git`文件夹，是因为此文件是隐藏文件，设置查看隐藏文件后就能看见，具体如何设置，自行百度）
+```bash
+---
+title: 基于Hexo和Github搭建技术博客 // 博文标题
+date: 2017-09-28 16:30:05		// 日期
+tags: [hexo,github]            // 标签
+categories: 搭建博客           // 分类
+comments: false               // 评论功能，默认开启
+---
+```
 
-② 创建一篇新的文章
-③ 执行`hexo g`，再执行`hexo d`，过几秒钟，去访问`bolg.morningtec.cn`，你就可以看到你发布的新文章了。
+
+
+③ 如果需要文章需要图片，在`source/_posts/`文件夹内新建一个和博客标题名一样的文件夹，把图片放置内，然后再`MarkDown`里引用（例如）：
+
+`MarkDown的图片命令：![](基于Hexo和Github搭建技术博客/example.png)`
+
+![](基于Hexo和Github搭建技术博客/example.png)
+
+④ 文章写完后，再推送到`github`上，然后会有人在某一时刻上传到博客。
 
 ## 创建文章并发布到博客：
 站点的根目录下执行以下命令来创建一篇文章：
