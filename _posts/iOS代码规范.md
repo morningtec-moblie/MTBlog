@@ -6,16 +6,6 @@ categories: [iOS,by范献超]
 author: by范献超
 ---
 
-
-# 参考：
-[Objective-C编码规范[译]](http://www.jianshu.com/p/8b76814b3663)
-
-[IOS 编码规范整理](http://www.jianshu.com/p/f13119c179a4)
-
-[iOS团队代码规范（OC版）](http://hawkingouyang.com/2016/09/10/7_ObjC-code-style-as-team/)
-
-
-
 # 语言
 
 应该使用US英语.
@@ -815,3 +805,12 @@ self.productsRequest = [[SKProductsRequest alloc]
 - Resource：存放资源，按照图片，音频，视频不同分类存放
 
 - Request：封装的网络请求类
+
+
+
+# 参考：
+[Objective-C编码规范[译]](http://www.jianshu.com/p/8b76814b3663)
+
+[IOS 编码规范整理](http://www.jianshu.com/p/f13119c179a4)
+
+[iOS团队代码规范（OC版）](http://hawkingouyang.com/2016/09/10/7_ObjC-code-style-as-team/)
