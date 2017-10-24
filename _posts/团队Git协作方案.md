@@ -2,7 +2,7 @@
 title: 团队Git协作方案 
 date: 2017-10-13 14:11:05		
 tags: [工作流程,git]            
-categories: 团队协作           
+categories: [团队协作,by杨佳欢]          
 ---
 # 团队Git协作方案
 

@@ -2,7 +2,7 @@
 title: 基于Hexo和Github搭建技术博客
 date: 2017-09-28 16:30:05
 tags: [hexo,github]
-categories: 搭建博客
+categories: [搭建博客,by曾浩]
 ---
 ## 前言
 当前比较流行的方法就是Hexo与Github搭建博客。Hexo是一个快速、简洁且高效的博客框架，有比较丰富的主题和插件支持。

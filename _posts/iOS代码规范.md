@@ -2,7 +2,8 @@
 title: iOS代码规范
 date: 2017-10-17
 tags: [iOS,代码规范,OC]
-categories: iOS
+categories: [iOS,by范献超]
+author: by范献超
 ---
 
 
@@ -197,7 +198,7 @@ id varnm;
 
 ```
 
-### 总体命名规范（遵循苹果官方规范）
+## 总体命名规范（遵循苹果官方规范）
 
 `小驼峰命名法(CamelCase):第一个单词小写字母开头，其他单词首字母大写；`
 
@@ -774,14 +775,14 @@ self.productsRequest = [[SKProductsRequest alloc]
 
 # 项目工程目录
 
-### 当前SDK项目目录（面向对象）
+## 当前SDK项目目录（面向对象）
 - ApplicationLayer（应用层）
   - Base（基类）
   - View （UI类）
 - DataAccessLayer（数据层）
   - Network（网络层）
-  	  - Common（公共数据处理方法）
-  	  - Model（数据模型）
+  	 - Common（公共数据处理方法）
+  	 - Model（数据模型）
   - DataSDKNeed（SDK需要数据收集）
   - Persistence（数据缓存）
 - ServiceLayer(服务层)
@@ -793,7 +794,7 @@ self.productsRequest = [[SKProductsRequest alloc]
   	 - Other (其他)
   - Other(扩展)
 
-### 其他案例：
+## 其他案例：
 
 - Modules：存放功能模块。将程序划分为多个功能模块，每个模块基于MVC/MVVM组织代码
 
